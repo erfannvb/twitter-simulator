@@ -29,4 +29,9 @@ public class Comment extends BaseEntity<Long> {
     @OneToMany(mappedBy = "comment")
     private Set<Like> likeSet = new HashSet<>();
 
+    public Comment(String message, Tweet tweet, User user) {
+        this.message = message;
+        this.tweet = tweet;
+        this.user = user;
+    }
 }

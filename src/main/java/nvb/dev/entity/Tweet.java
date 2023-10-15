@@ -28,4 +28,8 @@ public class Tweet extends BaseEntity<Long> {
     @OneToMany(mappedBy = "tweet")
     private Set<Comment> commentSet = new HashSet<>();
 
+    public Tweet(String message, User user) {
+        this.message = message;
+        this.user = user;
+    }
 }

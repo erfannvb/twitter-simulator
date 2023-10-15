@@ -34,4 +34,13 @@ public class User extends BaseEntity<Long> {
     @OneToMany(mappedBy = "user")
     private Set<Tweet> tweetSet = new HashSet<>();
 
+    public User(String firstName, String lastName, String username,
+                String password, int age, LocalDate birthDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.age = age;
+        this.birthDate = birthDate;
+    }
 }
