@@ -16,6 +16,8 @@ import nvb.dev.base.entity.BaseEntity;
 @ToString
 public class Like extends BaseEntity<Long> {
 
+    private int likeCounter;
+
     @ManyToOne
     @JoinColumn(name = "tweet_id")
     private Tweet tweet;
