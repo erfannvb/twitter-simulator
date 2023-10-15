@@ -1,6 +1,7 @@
 package nvb.dev.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import nvb.dev.base.entity.BaseEntity;
 
@@ -16,6 +17,7 @@ import java.util.Set;
 @ToString
 public class Comment extends BaseEntity<Long> {
 
+    @NotNull(message = "comment must not be null")
     private String message;
 
     @ManyToOne
