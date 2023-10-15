@@ -17,7 +17,6 @@ import java.util.Set;
 @ToString
 public class Tweet extends BaseEntity<Long> {
 
-    @NotNull(message = "tweet must not be null")
     private String message;
 
     @ManyToOne

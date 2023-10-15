@@ -17,7 +17,6 @@ import java.util.Set;
 @ToString
 public class Comment extends BaseEntity<Long> {
 
-    @NotNull(message = "comment must not be null")
     private String message;
 
     @ManyToOne
