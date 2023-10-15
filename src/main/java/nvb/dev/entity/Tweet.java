@@ -1,6 +1,7 @@
 package nvb.dev.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import nvb.dev.base.entity.BaseEntity;
@@ -17,6 +18,7 @@ import java.util.Set;
 @ToString
 public class Tweet extends BaseEntity<Long> {
 
+    @Max(value = 280, message = "tweet cannot be more than 280 characters")
     private String message;
 
     @ManyToOne
