@@ -66,4 +66,5 @@ public class UserRepositoryImpl extends BaseRepositoryImpl<Long, User> implement
 
         return Optional.ofNullable(result);
     }
+
 }
