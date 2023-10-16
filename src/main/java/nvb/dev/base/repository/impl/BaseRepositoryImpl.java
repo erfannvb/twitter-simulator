@@ -24,7 +24,8 @@ public abstract class BaseRepositoryImpl<ID extends Serializable, Entity extends
 
     @Override
     public void update(Entity entity) {
-        session.merge(entity);
+        if (findById(entity.getId()).isPresent())
+            session.merge(entity);
     }
 
     @Override
