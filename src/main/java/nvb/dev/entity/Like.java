@@ -16,7 +16,7 @@ import nvb.dev.base.entity.BaseEntity;
 @ToString
 public class Like extends BaseEntity<Long> {
 
-    private int likeCounter;
+    private String likeCounter;
 
     @ManyToOne
     @JoinColumn(name = "tweet_id")
@@ -30,7 +30,7 @@ public class Like extends BaseEntity<Long> {
     @JoinColumn(name = "comment_id")
     private Comment comment;
 
-    public Like(int likeCounter, Tweet tweet, User user) {
+    public Like(String likeCounter, Tweet tweet, User user) {
         this.likeCounter = likeCounter;
         this.tweet = tweet;
         this.user = user;
