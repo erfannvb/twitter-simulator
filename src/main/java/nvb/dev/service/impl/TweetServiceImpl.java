@@ -3,9 +3,10 @@ package nvb.dev.service.impl;
 import nvb.dev.base.service.impl.BaseServiceImpl;
 import nvb.dev.entity.Tweet;
 import nvb.dev.repository.TweetRepository;
+import nvb.dev.service.TweetService;
 import org.hibernate.Session;
 
-public class TweetServiceImpl extends BaseServiceImpl<Long, Tweet, TweetRepository> implements TweetRepository {
+public class TweetServiceImpl extends BaseServiceImpl<Long, Tweet, TweetRepository> implements TweetService {
 
     protected final Session session;
 
