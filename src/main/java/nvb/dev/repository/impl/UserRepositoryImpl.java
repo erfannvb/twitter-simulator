@@ -54,6 +54,20 @@ public class UserRepositoryImpl extends BaseRepositoryImpl<Long, User> implement
     }
 
     @Override
+    public Optional<User> findByPassword(String password) {
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+
+        CriteriaQuery<User> query = builder.createQuery(User.class);
+        Root<User> root = query.from(User.class);
+        query.where(builder.equal(root.get("password"), password));
+
+        TypedQuery<User> userTypedQuery = session.createQuery(query);
+        User result = userTypedQuery.getSingleResult();
+
+        return Optional.ofNullable(result);
+    }
+
+    @Override
     public Optional<User> findUserByAge(int age) {
         CriteriaBuilder builder = session.getCriteriaBuilder();
 

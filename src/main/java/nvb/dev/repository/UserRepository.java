@@ -11,6 +11,8 @@ public interface UserRepository extends BaseRepository<Long, User> {
 
     Optional<User> findUserByUsername(String username);
 
+    Optional<User> findByPassword(String password);
+
     Optional<User> findUserByAge(int age);
 
 }
