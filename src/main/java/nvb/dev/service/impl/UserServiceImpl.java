@@ -69,6 +69,11 @@ public class UserServiceImpl extends BaseServiceImpl<Long, User, UserRepository>
     }
 
     @Override
+    public Optional<User> findByPassword(String password) {
+        return repository.findByPassword(password);
+    }
+
+    @Override
     public Optional<User> findUserByAge(int age) {
         return repository.findUserByAge(age);
     }
