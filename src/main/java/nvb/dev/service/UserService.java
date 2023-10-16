@@ -17,6 +17,4 @@ public interface UserService extends BaseService<Long, User> {
 
     Optional<User> findByPassword(String password);
 
-    Optional<User> findUserByAge(int age);
-
 }
