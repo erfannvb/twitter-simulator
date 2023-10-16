@@ -35,4 +35,9 @@ public class Comment extends BaseEntity<Long> {
         this.tweet = tweet;
         this.user = user;
     }
+
+    public Comment(String message, Tweet tweet) {
+        this.message = message;
+        this.tweet = tweet;
+    }
 }
