@@ -36,26 +36,14 @@ public class User extends BaseEntity<Long> {
     @NotEmpty(message = "password must not be empty")
     private String password;
 
-    @Positive(message = "age must be a positive value")
-    @Min(value = 15, message = "age must be at least 15")
-    @NotNull(message = "age must not be null")
-    private int age;
-
-    @NotNull(message = "birthDate must not be null")
-    @Temporal(TemporalType.DATE)
-    @Column(name = "birth_date")
-    private LocalDate birthDate;
-
     @OneToMany(mappedBy = "user")
     private Set<Tweet> tweetSet = new HashSet<>();
 
     public User(String firstName, String lastName, String username,
-                String password, int age, LocalDate birthDate) {
+                String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
-        this.age = age;
-        this.birthDate = birthDate;
     }
 }
