@@ -35,4 +35,14 @@ public class Like extends BaseEntity<Long> {
         this.tweet = tweet;
         this.user = user;
     }
+
+    public Like(String likeCounter, Tweet tweet) {
+        this.likeCounter = likeCounter;
+        this.tweet = tweet;
+    }
+
+    public Like(String likeCounter, Comment comment) {
+        this.likeCounter = likeCounter;
+        this.comment = comment;
+    }
 }
