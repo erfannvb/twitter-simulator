@@ -30,12 +30,6 @@ public class Like extends BaseEntity<Long> {
     @JoinColumn(name = "comment_id")
     private Comment comment;
 
-    public Like(String likeCounter, Tweet tweet, User user) {
-        this.likeCounter = likeCounter;
-        this.tweet = tweet;
-        this.user = user;
-    }
-
     public Like(String likeCounter, Tweet tweet) {
         this.likeCounter = likeCounter;
         this.tweet = tweet;
