@@ -50,6 +50,7 @@ public class UserServiceImpl extends BaseServiceImpl<Long, User, UserRepository>
                 validatorFactory.close();
                 return false;
             } else {
+                signUp(user);
                 return true;
             }
         } catch (ValidationException e) {
